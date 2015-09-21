@@ -1,0 +1,10 @@
+We used this PDF-version of the book since none of us owns a physical copy. The page numbers are from the PDF, not the hardback-copy:
+https://aanimesh.files.wordpress.com/2013/09/applying-uml-and-patterns-3rd.pdf
+
+The model gives a good and simple overview of what the system should do and it complements the requirements/use cases in a good way. 
+
+The first thing we noticed was that you have only used arrows in one place? Why only to Calendar? Generally we feel that you should be consistent - arrows everywhere or nowhere. Larman writes in Chapter 9, section 9.14 (figure 9.12, page 248 in the PDF) that "it has no meaning except to indicate direction of reading the association label" about the reading direction arrow, and that it's "often excluded".
+
+Have you planned on saving what Member views the Calendar somewhere? If that's the case, then the association from Member to Calendar is the right way to go. If not, the association should be removed, as Larman writes in Chapter 9, section 9.14 (page 246 in the PDF).
+
+Size feels like a complex concept rather than an attribute of Boat. We feel that Size should have it's own attributes like length, width and height. As Larman writes in Chapter 9, section 14 (Table 9.3, page 261 in the linked PDF), if the type has other attributes, it should be a new data type class.

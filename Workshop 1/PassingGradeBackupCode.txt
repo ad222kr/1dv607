@@ -1,0 +1,11 @@
+
+
+[Member]1-     Owns 1..* -[Boat]
+[Berth]1-       Contains 1[Boat]
+[Secretary] 1-    Books *[Berth]
+
+[Boat]                 1 Describes-1[BoatDetails|type: string; size: string;]
+[CalendarEvent|StartDate: dateTime; EndDate: dateTime]
+[Secretary] 1 - Manages *          [CalendarEvent]
+[Boat]1 HoldsinPlace         -  1 [Mooring]
+[Member] 1-      * Pays[Fee|quantity: int;currency: string]

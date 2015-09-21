@@ -1,0 +1,27 @@
+Hi!
+
+Take a look at this review instead, had to improve it a bit. be more objective and such.
+
+
+As a developer would the model help you and why/why not?
+
+I believe it was not required to add attributes for the classes but I do think it helps with the understanding of the system better, which in turn can be helpful.
+Do you think a domain expert (for example the Secretary) would understand the model why/why not?
+
+The secretary should be able to understand the model, he/she should be able to deduct what kind of responsibilities he/she have (CalendarEvent & Berth).
+What are the strong points of the model, what do you think is really good and why?
+
+Attributes for some classes are set, which gives a bit more indepth.
+Association multiplicity are being used which gives a better undestanding.
+The model manages the requirements without being too cluttered.
+What are the weaknesses of the model, what do you think should be changed and why?
+
+There could be more consistency on the model regarding use of association multiplicity.
+Some associations have no names which helps with understanding the model better.
+It might be because of yUML now that i think of it.
+According to Larman (9.16 Attributes) the usage of data types. Not necessary go too deep with the attributes. Instead of "type: string" and such go for just "type". Still it's considered OK I believe according to fig 9.24 but notice fig 9.26 usage of money then. Notice fig 9.27 which becomes less cluttered with the more simpler data.
+Do you think the model has passed the grade 2 (passing grade) criteria?
+
+There's no reason for the model to not pass, I think.
+All requirements are met except the #1 Authenticate part which I'm abit confused of.
+There is some minor details that can be improved a bit but not totallt necessary.
