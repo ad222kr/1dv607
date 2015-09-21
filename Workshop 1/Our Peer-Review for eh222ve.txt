@@ -1,11 +1,27 @@
-We used this PDF-version of the book since none of us owns a physical copy. The page numbers are from the PDF, not the hardback-copy:
+We used this PDF-version of the book since none of us owns a physical copy. 
+The page numbers are from the PDF, not the hardback-copy:
 https://aanimesh.files.wordpress.com/2013/09/applying-uml-and-patterns-3rd.pdf
 
 
-Generally the model gives a good overview of what the domain should do. One thing we reacted to was that Secretary and Member appears twice. This feels a bit unnecessary, you should move things around and connect Calendar/Event to the already existing Member/Secretary classes. Also, why does both Event and Calendar have Start/End date attributes? It would suffice with those attributes in Event only, since a Calendar always starts January 1th and ends December 31th. We have no backing from the book for these two points, they are rather our observations and personal thoughts.
+Generally the model gives a good overview of what the domain should do. 
+One thing we reacted to was that Secretary and Member appears twice. 
+This feels a bit unnecessary, you should move things around and connect 
+Calendar/Event to the already existing Member/Secretary classes. 
+Also, why does both Event and Calendar have Start/End date attributes? 
+It would suffice with those attributes in Event only, since a Calendar 
+always starts January 1th and ends December 31th. We have no backing 
+from the book for these two points, they are rather our observations 
+and personal thoughts.
 
-As Larman writes in Chapter 9, section 9.16 (figure 9.22, page 258 - 259 in the linked PDF), the most useful way to express that a conceptual class uses another is with an association, not an attribute. You have both association and attribute from Boat - Type, Boat/Berth - Size.
+As Larman writes in Chapter 9, section 9.16 (figure 9.22, page 258 - 
+259 in the linked PDF), the most useful way to express that a conceptual
+ class uses another is with an association, not an attribute. You have
+  both association and attribute from Boat - Type, Boat/Berth - Size.
 
-Do you plan to log and keep data of what Member reads what Calendar/Event? If that's the case, then the association from Member-Reads-Calendar/Event is useful. If you don't plan on keeping this in memory, remove the association, as Larman writes in Chapter 9, section 9.14 (page 245 in the PDF).
+Do you plan to log and keep data of what Member reads what Calendar/Event? 
+If that's the case, then the association from Member-Reads-Calendar/Event 
+is useful. If you don't plan on keeping this in memory, remove the association,
+as Larman writes in Chapter 9, section 9.14 (page 245 in the PDF).
 
-We think that the description-class History from Boat and Berth was a good idea, and that the Members fee is calculated(derived) from this.
+We think that the description-class History from Boat and Berth was a good 
+idea, and that the Members fee is calculated(derived) from this.

@@ -1,14 +1,19 @@
 As a developer would the model help you and why/why not?
-Yes, absolutely. It makes it possible to easily start a discussion. This domain model is a very nice thing when it’s time to understand an unknown domain. Even if I don’t understand everything it’s possible and easier to communicate.
+Yes, absolutely. It makes it possible to easily start a discussion. This domain model 
+is a very nice thing when it’s time to understand an unknown domain. Even if I don’t 
+understand everything it’s possible and easier to communicate.
 
 Do you think a domain expert (for example the Secretary) would understand the model why/why not?
-Both yes or no. I can absolutely agree with your conceptual classes. They are good. But associations would be nice if you added. I also think you should work a little bit more and adding some classes - so your model looks like the “real-situation”
+Both yes or no. I can absolutely agree with your conceptual classes. They are good. 
+But associations would be nice if you added. I also think you should work a little 
+bit more and adding some classes - so your model looks like the “real-situation”
 
 What are the strong points of the model, what do you think is really good and why?
 A description class that describes another class gives great flexability.
 (Larman, section 9.13)
 
-Multiplicity that shows how many instances of a class that can be instantiated makes your model easier to understand. Much information without adding to much clutter. Good!
+Multiplicity that shows how many instances of a class that can be instantiated makes 
+your model easier to understand. Much information without adding to much clutter. Good!
 (Larman, fig 9.11)
 
 What are the weaknesses of the model, what do you think should be changed and why?
@@ -21,11 +26,14 @@ Examples:
 Avoid to show not needed attribute.  I think it had been very ok to ignore image attribute.
 (Larman, section 9.16)
 
-If I had been the secretary I really would like to have a type of register. If you think like a “map maker” I hope you can agree with me? Maybe you should add a class named BoatRegister?
+If I had been the secretary I really would like to have a type of register. If you think like 
+a “map maker” I hope you can agree with me? Maybe you should add a class named BoatRegister?
 
 Do you think the model has passed the grade 2 (passing grade) criteria?
 
-Test to walk through all usecases and test your current model for all of the usecases that are mandatory for grade two. In that “walk-through-step-by-step-process” I know you will find some classes and associations that has to be added before you pass. 
+Test to walk through all usecases and test your current model for all of the usecases that 
+are mandatory for grade two. In that “walk-through-step-by-step-process” I know you will 
+find some classes and associations that has to be added before you pass. 
 
 References
 1.	Larman C., Applying UML and Patterns 3rd Ed, 2005, ISBN: 0131489062
