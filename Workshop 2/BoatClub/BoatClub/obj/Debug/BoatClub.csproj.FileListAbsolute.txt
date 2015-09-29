@@ -1,0 +1,6 @@
+C:\Users\Alex\Desktop\1dv607\Workshop 2\BoatClub\BoatClub\bin\Debug\BoatClub.exe.config
+C:\Users\Alex\Desktop\1dv607\Workshop 2\BoatClub\BoatClub\obj\Debug\BoatClub.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Desktop\1dv607\Workshop 2\BoatClub\BoatClub\bin\Debug\BoatClub.exe
+C:\Users\Alex\Desktop\1dv607\Workshop 2\BoatClub\BoatClub\bin\Debug\BoatClub.pdb
+C:\Users\Alex\Desktop\1dv607\Workshop 2\BoatClub\BoatClub\obj\Debug\BoatClub.exe
+C:\Users\Alex\Desktop\1dv607\Workshop 2\BoatClub\BoatClub\obj\Debug\BoatClub.pdb
