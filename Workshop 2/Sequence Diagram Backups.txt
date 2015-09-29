@@ -1,0 +1,12 @@
+title Register Member Sequence
+
+Program->C.AppController: Create()
+C.AppController->V.AppView: Show()
+C.AppController->V.AppView: GetEvent()
+C.AppController->C.MemberController: Create()
+
+V.AppView->M.Member: Create()
+C.MemberController->V.AppView: GetMember()
+C.MemberController->M.MemberRegistry: AuthenticateMember(Member)
+M.MemberRegistry->M.MemberRegistry: SaveToCache(Member)
+M.MemberRegistry->M.DAL.MemberDAL: InsertMember(Member)

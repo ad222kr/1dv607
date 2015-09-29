@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoatClub.Controller
+namespace BoatClub.View
 {
-    // TODO: come up with better name?
-    public class AdminController
+    class RegisterMemberView : BaseView
     {
     }
 }
