@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BoatClub.Model;
+using BoatClub.Controller;
+using BoatClub.View;
 namespace BoatClub
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var m = new Member("Alex", "Hejsan", "9206169253");
-            var boats = m.Boats;
-
-            Console.WriteLine(m.Boats);
+            var appView = new AppView();
+            var appController = new AppController();
             
-
+            appController.Start(appView);
         }
     }
 }

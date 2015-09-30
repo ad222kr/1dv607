@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace BoatClub.Controller
 {
-    class BoatController
+    public class BoatController : BaseController
     {
+
+        public override void ManageEventChoice(View.Event appEvent)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -68,5 +68,11 @@ namespace BoatClub.Model
             SocialSecurityNumber = socialSecurityNumber;
             _boats = new List<Boat>();
         }
+
+        public void AddBoat(Boat boat)
+        {
+            //if (boat == null) return; // or throw exception?
+            _boats.Add(boat);
+        }
     }
 }

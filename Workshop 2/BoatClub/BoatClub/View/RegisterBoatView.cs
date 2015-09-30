@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace BoatClub.View
 {
-    class RegisterBoatView
+    class RegisterBoatView : BaseView
     {
+        public override void Show()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Event GetEvent()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
