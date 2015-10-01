@@ -9,20 +9,33 @@ namespace BoatClub.View
 {
     class RegisterMemberView : BaseView
     {
+
         public override void Show()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Hej du vill skapa en ny medlem! Vad kul");
         }
 
-        public override Event GetEvent()
+        public void ShowConfirmMessage()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Grattis Niklas\n Tryck valfi tangen för att fortsätta");
+            Console.ReadKey();
         }
+
 
 
         public Member GetMember()
         {
-            throw new NotImplementedException();
+            var member = new Member();
+            Console.Write("Förnamn: ");
+            member.FirstName = Console.ReadLine();
+            Console.Write("Last name: ");
+            member.LastName = Console.ReadLine();
+            Console.Write("Social Security Number");
+            member.SocialSecurityNumber = Console.ReadLine();
+
+            return member;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace BoatClub.Model
         Motorsailer,
         Other
     }
+    [Serializable]
     public class Boat
     {
         public double Length { get; set; }

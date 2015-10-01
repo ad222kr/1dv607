@@ -13,7 +13,7 @@ namespace BoatClub.View
             throw new NotImplementedException();
         }
 
-        public override Event GetEvent()
+        public Event GetEvent()
         {
             throw new NotImplementedException();
         }

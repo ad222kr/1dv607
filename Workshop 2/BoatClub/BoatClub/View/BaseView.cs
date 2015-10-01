@@ -9,29 +9,24 @@ namespace BoatClub.View
     public enum Event
     {
         None,
-        ManageMember,
         RegisterMember,
         DeleteMember,
         UpdateMember,
         LookAtSpecificMember,
-        ListMembersVerbose,
-        ListMembersCompact,
-        ManageBoat,
+        ListMembers,
         RegisterBoat,
         DeleteBoat,
         UpdateBoat,
-        GoBack,
-        GoToMainMenu
-
+        Quit
+    }
+    public enum EventType
+    {
+        Member,
+        Boat
     }
     public abstract class BaseView
     {
-        protected const string chooseMessage = "What do you want to do?";
-
-        protected List<Event> _menuChoices;
-
         public abstract void Show();
-        public abstract Event GetEvent();
 
         protected int GetMenuChoice(string prompt, int maxChoices)
         {    
@@ -57,20 +52,6 @@ namespace BoatClub.View
             Console.BackgroundColor = ConsoleColor.Red;
             Console.WriteLine(message);
             Console.ResetColor();
-        }
-
-        protected string BuildMenuChoiceString()
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (Event choice in _menuChoices)
-            {
-                // http://stackoverflow.com/a/5021570
-                string withSpaces = string.Concat(choice.ToString().Select
-                    (x => Char.IsUpper(x) ? " " + x : x.ToString())).TrimStart(' ');
-                sb.Append(String.Format("{0}. {1}\n", _menuChoices.IndexOf(choice) + 1, withSpaces));
-            }
-
-            return sb.ToString();
         }
     }
 }

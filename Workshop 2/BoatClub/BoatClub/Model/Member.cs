@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BoatClub.Model
 {
+    [Serializable]
     public class Member
     {
         private string _firstName;
@@ -22,6 +23,7 @@ namespace BoatClub.Model
                 {
                     throw new ArgumentNullException("Firstname cannot be empty");
                 }
+                _firstName = value;
             }
         }
 
@@ -67,6 +69,11 @@ namespace BoatClub.Model
             LastName = lastName;
             SocialSecurityNumber = socialSecurityNumber;
             _boats = new List<Boat>();
+        }
+
+        public Member()
+        {
+            // TODO: Complete member initialization
         }
 
         public void AddBoat(Boat boat)

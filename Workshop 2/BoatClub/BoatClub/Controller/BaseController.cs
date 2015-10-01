@@ -9,13 +9,7 @@ namespace BoatClub.Controller
 {
     public abstract class BaseController
     {
-        public void Start(BaseView view)
-        {
-            view.Show();
-            Event e = view.GetEvent();
-            ManageEventChoice(e);
-        }
-
-        public abstract void ManageEventChoice(Event appEvent);
+        public abstract void Start();
+        
     }
 }
