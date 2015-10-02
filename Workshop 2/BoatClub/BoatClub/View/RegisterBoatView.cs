@@ -17,5 +17,10 @@ namespace BoatClub.View
         {
             throw new NotImplementedException();
         }
+
+        public override void ShowMessage()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

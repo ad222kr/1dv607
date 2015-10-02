@@ -31,9 +31,7 @@ namespace BoatClub.View
 
         public override void Show()
         {
-            Console.Clear();
-            Console.WriteLine(title);
-            Console.WriteLine(BuildMenuChoiceString());
+            ShowMessage();
         }
 
         public Event GetEvent()
@@ -74,6 +72,13 @@ namespace BoatClub.View
             }
 
             return sb.ToString();
+        }
+
+        public override void ShowMessage()
+        {
+            Console.Clear();
+            Console.WriteLine(title);
+            Console.WriteLine(BuildMenuChoiceString());
         }
     }
 }

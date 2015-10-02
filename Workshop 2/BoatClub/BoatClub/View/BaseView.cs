@@ -38,7 +38,7 @@ namespace BoatClub.View
 
                 if (!int.TryParse(line.ToString(), out key) || key <= 0 || key > maxChoices)
                 {
-                    ShowErrorMessage("\nNot a valid choice");
+                    ShowFeedbackMessage("\nNot a valid choice", true);
                 }
                 else
                 {
@@ -47,11 +47,20 @@ namespace BoatClub.View
             }
         }
 
-        protected void ShowErrorMessage(string message)
+        protected void ShowFeedbackMessage(string message, bool isError)
         {
-            Console.BackgroundColor = ConsoleColor.Red;
+            if (isError)
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+            } 
             Console.WriteLine(message);
             Console.ResetColor();
         }
+
+        /// <summary>
+        /// Shows a message and continues on key pressed
+        /// </summary>
+        /// <param name="message"></param>
+        public abstract void ShowMessage();
     }
 }

@@ -32,24 +32,6 @@ namespace BoatClub.Model.DAL
                 var binaryFormatter = new BinaryFormatter();
                 binaryFormatter.Serialize(stream, objectToSerialize);
             }
-
-
-
-            /*if (objectToSerialize == null) { return; }
-
-           
-            XmlDocument xmlDocument = new XmlDocument();
-            XmlSerializer serializer = new XmlSerializer(objectToSerialize.GetType());
-            using (MemoryStream stream = new MemoryStream())
-            {
-                serializer.Serialize(stream, objectToSerialize);
-                stream.Position = 0;
-                xmlDocument.Load(stream);
-                xmlDocument.Save(path + fileName);
-                stream.Close();
-            } */
-            
-
         }
 
         private T Deserialize<T>()

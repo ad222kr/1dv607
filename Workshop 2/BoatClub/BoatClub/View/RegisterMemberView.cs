@@ -9,21 +9,13 @@ namespace BoatClub.View
 {
     class RegisterMemberView : BaseView
     {
+        private static readonly string confirmMessage = "Member registration successful!.";
 
         public override void Show()
         {
             Console.Clear();
             Console.WriteLine("Hej du vill skapa en ny medlem! Vad kul");
         }
-
-        public void ShowConfirmMessage()
-        {
-            Console.Clear();
-            Console.WriteLine("Grattis Niklas\n Tryck valfi tangen för att fortsätta");
-            Console.ReadKey();
-        }
-
-
 
         public Member GetMember()
         {
@@ -32,10 +24,15 @@ namespace BoatClub.View
             member.FirstName = Console.ReadLine();
             Console.Write("Last name: ");
             member.LastName = Console.ReadLine();
-            Console.Write("Social Security Number");
+            Console.Write("Social Security Number: ");
             member.SocialSecurityNumber = Console.ReadLine();
-
             return member;
+        }
+
+        public override void ShowMessage()
+        {
+            Console.WriteLine(confirmMessage);
+            Console.ReadKey();
         }
     }
 }

@@ -73,7 +73,7 @@ namespace BoatClub.Model
 
         public Member()
         {
-            // TODO: Complete member initialization
+            _boats = new List<Boat>();
         }
 
         public void AddBoat(Boat boat)

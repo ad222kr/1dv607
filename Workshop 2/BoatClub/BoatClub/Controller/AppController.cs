@@ -12,31 +12,25 @@ namespace BoatClub.Controller
     // TODO: come up with better name?
     public class AppController : BaseController
     {
-        private MemberDAL _memberDAL;
-        private MemberRegistry _memberRegistry;
         public AppView AppView { get; private set; }
         private MemberDAL MemberDAL { get { return _memberDAL ?? (_memberDAL = new MemberDAL()); } }
         public AppController(AppView appView)
         {
             AppView = appView;
+            new MemberRegistry();
             _memberDAL = new MemberDAL();
             _memberRegistry = _memberDAL.Load();
-
         }
 
 
         public override void Start()
         {
-
-
-
             while (true)
             {
                 AppView.Show();
                 Event e = AppView.GetEvent();
                 ManageEventChoice(e); 
             }
-
         }
 
         public void ManageEventChoice(Event appEvent)
@@ -83,16 +77,17 @@ namespace BoatClub.Controller
 
         private void DeleteMember()
         {
-            throw new NotImplementedException();
+            var view = new DeleteMemberView();
+            var controller = new DeleteMemberController(view, MemberDAL, _memberRegistry);
+            controller.Start();
         }
 
 
         private void ListMembers()
         {
-            foreach (var m in _memberRegistry.Members)
-            {
-                Console.WriteLine(String.Format("{0} - {1}", m.FirstName, m.LastName));
-            }
+            var view = new ListMembersView(_memberRegistry);
+            var controller = new ListMembersController(view);
+            controller.Start();
         }
 
         private void LookAtSpecificMember()
