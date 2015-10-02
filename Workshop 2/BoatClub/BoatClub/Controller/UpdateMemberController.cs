@@ -30,12 +30,11 @@ namespace BoatClub.Controller
                 try
                 {
                     var member = _memberRegistry.GetMemberByID(memberID);
-                    do
-                    {
-                        int optionKey = _view.GetUserOptionChoice();
-                        UpdateMember(member, optionKey);
-                        _memberDAL.Save(_memberRegistry); 
-                    } while (Console.ReadKey().KeyChar != 'q');
+
+                    int optionKey = _view.GetUserOptionChoice();
+                    UpdateMember(member, optionKey);
+                    _memberDAL.Save(_memberRegistry); 
+                    
                     break;  
                 }
                 catch (Exception e)
@@ -58,7 +57,6 @@ namespace BoatClub.Controller
                 case 3:
                     member.SocialSecurityNumber = _view.GetSocialSecurityNumber();
                     break;
-                
 
             }
         }
