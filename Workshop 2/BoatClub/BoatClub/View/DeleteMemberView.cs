@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace BoatClub.View
 {
-    class DeleteMemberView : ListMembersView
+    class DeleteMemberView : MemberView
     {
-        
+
+        public override void Show()
+        {
+            Console.Clear();
+            Console.WriteLine("Please enter the ID of the member to delete: ");
+        }
+
+        public override void ShowMessage()
+        {
+            Console.WriteLine("Member Deleted successfully!");
+            Console.ReadKey();
+        }
     }
 }

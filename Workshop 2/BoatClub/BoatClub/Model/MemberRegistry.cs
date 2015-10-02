@@ -18,9 +18,9 @@ namespace BoatClub.Model
         public MemberRegistry()
         {
             _members = new List<Member>();
-                   
+
         }
-        
+
 
         public void SaveMember(Member member)
         {
@@ -33,6 +33,29 @@ namespace BoatClub.Model
             int id = tempMembers[tempMembers.Length - 1].MemberID + 1;
             return id;
 
+
+        }
+
+        public bool DeleteMemberByID(int memberID)
+        {
+            var member = _members.Find(x => x.MemberID == memberID);
+            if (member == null)
+            {
+                return false;
+            }
+            _members.Remove(member);
+            return true;
+        }
+
+        public Member GetMemberByID(int memberID)
+        {
+            var member = _members.Find(x => x.MemberID == memberID);
+            if (member == null)
+            {
+                throw new ApplicationException("That member doesnt exist");
+            }
+
+            return member;
 
         }
     }

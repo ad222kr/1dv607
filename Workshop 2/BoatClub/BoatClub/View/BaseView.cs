@@ -47,7 +47,21 @@ namespace BoatClub.View
             }
         }
 
-        protected void ShowFeedbackMessage(string message, bool isError)
+        protected int GetIntInputFromString()
+        {
+            while (true)
+            {
+                string input = Console.ReadLine();
+                int key;
+                if (int.TryParse(input, out key))
+                {
+                    return key;
+                }
+                ShowFeedbackMessage("Input fucked up", true);
+            }
+        }
+
+        public void ShowFeedbackMessage(string message, bool isError)
         {
             if (isError)
             {

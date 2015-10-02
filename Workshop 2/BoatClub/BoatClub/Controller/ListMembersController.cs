@@ -11,18 +11,18 @@ namespace BoatClub.Controller
 {
     class ListMembersController : BaseController
     {
-        public ListMembersView View { get; private set; }
+        public ListMembersView _view;
 
         public ListMembersController(ListMembersView view)
             :base()
         {
-            View = view;
+            _view = view;
         }
         public override void Start()
         {
-            View.Show();
-            View.DoesUserWantToSeeCompactList();
-            View.ShowMessage();
+            _view.Show();
+            _view.DoesUserWantToSeeCompactList();
+            _view.ShowMessage();
         }
     }
 }
