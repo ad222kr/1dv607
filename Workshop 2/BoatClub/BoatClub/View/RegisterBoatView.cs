@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoatClub.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,21 +7,39 @@ using System.Threading.Tasks;
 
 namespace BoatClub.View
 {
-    class RegisterBoatView : BaseView
+    public class RegisterBoatView : BaseView
     {
         public override void Show()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Register a new boat");
         }
 
-        public Event GetEvent()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public override void ShowMessage()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Boat registered!");
+            Console.ReadKey();
         }
+
+        public int GetMemberID()
+        {
+            Console.WriteLine("Enter ID of member that wants to register a boat: ");
+            return GetIntInputFromString();
+        }
+
+        public Boat GetBoat()
+        {
+            var boat = new Boat();
+            Console.Write("Enter boat length: ");
+            boat.Length = GetIntInputFromString();
+            Console.WriteLine("Please choose boat type");
+            boat.Type = (BoatType)GetMenuChoice("1. Sailboat\n2. Kayak\n3. Motorsailer\n4. Other", 4);
+
+            return boat;
+        }
+
+        
     }
 }

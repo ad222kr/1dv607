@@ -27,20 +27,34 @@ namespace BoatClub.Model.DAL
 
         private void Serialize<T>(T objectToSerialize)
         {
-            using (Stream stream = File.Open(path + fileName, FileMode.Create)) 
+            try
             {
-                var binaryFormatter = new BinaryFormatter();
-                binaryFormatter.Serialize(stream, objectToSerialize);
+                using (Stream stream = File.Open(path + fileName, FileMode.Create))
+                {
+                    var binaryFormatter = new BinaryFormatter();
+                    binaryFormatter.Serialize(stream, objectToSerialize);
+                }
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("A problem occured when getting the data");
             }
         }
 
         private T Deserialize<T>()
         {
-            
-            using (Stream stream = File.Open(path + fileName, FileMode.Open))
+            try
             {
-                var binaryFormatter = new BinaryFormatter();
-                return (T)binaryFormatter.Deserialize(stream);
+
+                using (Stream stream = File.Open(path + fileName, FileMode.Open))
+                {
+                    var binaryFormatter = new BinaryFormatter();
+                    return (T)binaryFormatter.Deserialize(stream);
+                }
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("A problem occured when saving data");
             }
             
 

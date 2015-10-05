@@ -43,15 +43,19 @@
   <ItemGroup>
     <Compile Include="Controller\AppController.cs" />
     <Compile Include="Controller\BaseController.cs" />
+    <Compile Include="Controller\DeleteBoatController.cs" />
     <Compile Include="Controller\DeleteMemberController.cs" />
     <Compile Include="Controller\ListMembersController.cs" />
     <Compile Include="Controller\LookAtSpecificMemberController.cs" />
+    <Compile Include="Controller\RegisterBoatController.cs" />
     <Compile Include="Controller\RegisterMemberController.cs" />
     <Compile Include="Controller\UpdateMemberController.cs" />
     <Compile Include="Model\Boat.cs" />
     <Compile Include="Model\DAL\MemberDAL.cs" />
     <Compile Include="Model\Member.cs" />
     <Compile Include="Model\MemberRegistry.cs" />
+    <Compile Include="Model\Service.cs" />
+    <Compile Include="View\DeleteBoatView.cs" />
     <Compile Include="View\DeleteMemberView.cs" />
     <Compile Include="View\ListMembersView.cs" />
     <Compile Include="View\MemberView.cs" />

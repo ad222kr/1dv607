@@ -12,20 +12,22 @@ namespace BoatClub.Controller
     {
         private MemberView _view;
 
-        public LookAtSpecificMemberController(MemberView view, MemberRegistry memberRegistry)
+        public LookAtSpecificMemberController(MemberView view) :base()
         {
             // TODO: Complete member initialization
             _view = view;
-            _memberRegistry = memberRegistry;
+
         }
         public override void Start()
         {
             _view.Show();
-            while (true)
+
+            do
             {
-                int memberID = _view.GetMemberID();
+
                 try
                 {
+                    int memberID = _view.GetMemberID();
                     var member = _memberRegistry.GetMemberByID(memberID);
                     _view.DisplayMember(member);
                     _view.ShowMessage();
@@ -34,8 +36,8 @@ namespace BoatClub.Controller
                 catch (Exception exception)
                 {
                     _view.ShowFeedbackMessage(exception.Message, true);
-                }      
-            }  
+                }
+            } while ((Console.ReadKey().Key != ConsoleKey.Backspace));
         }
 
     }

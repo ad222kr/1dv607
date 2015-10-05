@@ -57,7 +57,7 @@ namespace BoatClub.View
                 {
                     return key;
                 }
-                ShowFeedbackMessage("Input fucked up", true);
+                ShowFeedbackMessage("Input must be an integer", true);
             }
         }
 

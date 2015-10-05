@@ -13,35 +13,36 @@ namespace BoatClub.Controller
     {
         private UpdateMemberView _view;
 
-        public UpdateMemberController(UpdateMemberView view, MemberRegistry memberRegistry, MemberDAL memberDAL)
+        public UpdateMemberController(UpdateMemberView view):base()
         {
-            // TODO: Complete member initialization
             _view = view;
-            _memberRegistry = memberRegistry;
-            _memberDAL = memberDAL;
         }
+
 
         public override void Start()
         {
             _view.Show();
-            int memberID = _view.GetMemberID();
-            while (true)
+
+            do
             {
                 try
                 {
+                    int memberID = _view.GetMemberID();
                     var member = _memberRegistry.GetMemberByID(memberID);
 
                     int optionKey = _view.GetUserOptionChoice();
                     UpdateMember(member, optionKey);
-                    _memberDAL.Save(_memberRegistry); 
-                    
-                    break;  
+                    Service.SaveMemberRegistry(_memberRegistry);
+                    _view.ShowMessage();
+                    break;
+
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.Message, true);
-                } 
-            }
+                    _view.ShowFeedbackMessage(e.Message, true);
+
+                }
+            } while (Console.ReadKey().Key != ConsoleKey.Backspace);
         }
 
         private void UpdateMember(Member member, int key)
@@ -57,9 +58,7 @@ namespace BoatClub.Controller
                 case 3:
                     member.SocialSecurityNumber = _view.GetSocialSecurityNumber();
                     break;
-
             }
         }
-
     }
 }

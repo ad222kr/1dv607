@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace BoatClub.Model
 {
+    /// <summary>
+    /// Class that holds the members. Changes occur here, but when 
+    /// saving/deleting/updating member/boat this class gets serialized
+    /// and saved to a text-file in binary for a simple persistance-storage.
+    /// </summary>
     [Serializable]
     public class MemberRegistry
     {

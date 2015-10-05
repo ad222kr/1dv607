@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,9 +57,9 @@ namespace BoatClub.Model
             }
         }
 
-        public IReadOnlyCollection<Boat> Boats
+        public ReadOnlyCollection<Boat> Boats
         {
-            get { return _boats; }
+            get { return _boats.AsReadOnly(); }
         }
         public int MemberID { get; set; }
         
@@ -78,8 +79,12 @@ namespace BoatClub.Model
 
         public void AddBoat(Boat boat)
         {
-            //if (boat == null) return; // or throw exception?
             _boats.Add(boat);
+        }
+
+        public void RemoveBoatByIndex(int index)
+        {
+            _boats.RemoveAt(index);
         }
     }
 }

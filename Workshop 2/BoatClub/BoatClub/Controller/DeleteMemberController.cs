@@ -13,28 +13,30 @@ namespace BoatClub.Controller
     {
         private DeleteMemberView _view;
      
-
-        public DeleteMemberController(DeleteMemberView view, MemberDAL memberDAL, MemberRegistry memberRegistry)
-            :base(memberDAL, memberRegistry)
+        public DeleteMemberController(DeleteMemberView view) :base()
         {
             _view = view;
-            _memberRegistry = _memberRegistry;
         }
+
         public override void Start()
         {
             _view.Show();
-            
-            while (true)
+
+
+            do
             {
                 int memberID = _view.GetMemberID();
                 if (_memberRegistry.DeleteMemberByID(memberID))
                 {
-                    _memberDAL.Save(_memberRegistry);
+                    Service.SaveMemberRegistry(_memberRegistry);
+                    _view.ShowMessage();
                     break;
                 }
                 _view.ShowMemberDoesNotExistMessage();
-            }
-            _view.ShowMessage();
+
+            } while ((Console.ReadKey().Key != ConsoleKey.Backspace));   
+            
+            
    
         }
     }

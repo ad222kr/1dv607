@@ -40,7 +40,7 @@ namespace BoatClub.View
 
             foreach (var boat in member.Boats)
             {
-                Console.WriteLine("Type: {0}. Length: {1}", boat.Length, boat.Type.ToString());
+                Console.WriteLine("Type: {0}. Length: {1}", boat.Type.ToString(), boat.Length.ToString());
             }
         }
     }

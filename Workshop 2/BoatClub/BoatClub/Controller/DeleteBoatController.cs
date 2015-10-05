@@ -1,6 +1,4 @@
-﻿using BoatClub.Model;
-using BoatClub.Model.DAL;
-using BoatClub.View;
+﻿using BoatClub.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,41 +7,37 @@ using System.Threading.Tasks;
 
 namespace BoatClub.Controller
 {
-    class RegisterMemberController : BaseController
+    public class DeleteBoatController : BaseController
     {
+        private DeleteBoatView _view;
 
-
-        private RegisterMemberView _view;
-        
-
-        public RegisterMemberController(RegisterMemberView view): base()
+        public DeleteBoatController(DeleteBoatView view) :base() 
         {
-            // TODO: Complete member initialization
             _view = view;
-            _memberRegistry = _service.LoadMemberRegistry();
         }
 
         public override void Start()
         {
             _view.Show();
+
             do
             {
                 try
                 {
-
-                    var member = _view.GetMember();
-                    member.MemberID = _memberRegistry.GetUniqueMemberId();
-                    _memberRegistry.SaveMember(member);
+                    int memberID = _view.GetMemberID();
+                    var member = _memberRegistry.GetMemberByID(memberID);
+                    var index = _view.GetIndexOfBoatToDelete(member);
+                    member.RemoveBoatByIndex(index);
                     Service.SaveMemberRegistry(_memberRegistry);
                     _view.ShowMessage();
                     break;
+
                 }
                 catch (Exception e)
                 {
                     _view.ShowFeedbackMessage(e.Message, true);
                 }
-            } while (Console.ReadKey().Key != ConsoleKey.Backspace);
+            } while ((Console.ReadKey().Key != ConsoleKey.Backspace));
         }
-
     }
 }

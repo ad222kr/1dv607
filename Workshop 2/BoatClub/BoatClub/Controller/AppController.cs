@@ -12,14 +12,11 @@ namespace BoatClub.Controller
     // TODO: come up with better name?
     public class AppController : BaseController
     {
-        public AppView _view;
-        private MemberDAL MemberDAL { get { return _memberDAL ?? (_memberDAL = new MemberDAL()); } }
+        private AppView _view;
+   
         public AppController(AppView appView)
         {
             _view = appView;
-            new MemberRegistry();
-            _memberDAL = new MemberDAL();
-            _memberRegistry = _memberDAL.Load();
         }
 
 
@@ -27,9 +24,11 @@ namespace BoatClub.Controller
         {
             while (true)
             {
+
                 _view.Show();
                 Event e = _view.GetEvent();
-                ManageEventChoice(e); 
+                ManageEventChoice(e);
+                
             }
         }
 
@@ -70,7 +69,7 @@ namespace BoatClub.Controller
         private void RegisterMember()
         {
             var view = new RegisterMemberView();
-            var controller = new RegisterMemberController(view, MemberDAL, _memberRegistry);
+            var controller = new RegisterMemberController(view);
             controller.Start();
         }
 
@@ -78,14 +77,14 @@ namespace BoatClub.Controller
         private void DeleteMember()
         {
             var view = new DeleteMemberView();
-            var controller = new DeleteMemberController(view, MemberDAL, _memberRegistry);
+            var controller = new DeleteMemberController(view);
             controller.Start();
         }
 
 
         private void ListMembers()
         {
-            var view = new ListMembersView(_memberRegistry);
+            var view = new ListMembersView();
             var controller = new ListMembersController(view);
             controller.Start();
         }
@@ -93,19 +92,21 @@ namespace BoatClub.Controller
         private void LookAtSpecificMember()
         {
             var view = new MemberView();
-            var controller = new LookAtSpecificMemberController(view, _memberRegistry);
+            var controller = new LookAtSpecificMemberController(view);
             controller.Start();
         }
 
         private void UpdateMember()
         {
             var view = new UpdateMemberView();
-            var controller = new UpdateMemberController(view, _memberRegistry, _memberDAL);
+            var controller = new UpdateMemberController(view);
             controller.Start();
         }
         private void RegisterBoat()
         {
-            throw new NotImplementedException();
+            var view = new RegisterBoatView();
+            var controller = new RegisterBoatController(view);
+            controller.Start();
         }
 
         private void UpdateBoat()
@@ -115,7 +116,9 @@ namespace BoatClub.Controller
 
         private void DeleteBoat()
         {
-            throw new NotImplementedException();
+            var view = new DeleteBoatView();
+            var controller = new DeleteBoatController(view);
+            controller.Start();
         }
 
 

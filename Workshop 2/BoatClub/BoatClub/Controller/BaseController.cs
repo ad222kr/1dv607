@@ -11,24 +11,17 @@ namespace BoatClub.Controller
 {
     public abstract class BaseController
     {
-        protected MemberDAL _memberDAL;
+
+        protected Service _service;
         protected MemberRegistry _memberRegistry;
 
-        public BaseController(MemberDAL memberDAL, MemberRegistry memberRegistry)
-        {
-            _memberDAL = memberDAL;
-            _memberRegistry = memberRegistry;
-        }
-
-        public BaseController(MemberDAL memberDAL)
-        {
-            _memberDAL = memberDAL;
-        }
+        protected Service Service { get { return _service ?? (_service = new Service()); } }
 
         public BaseController()
         {
-
+            _memberRegistry = Service.LoadMemberRegistry();
         }
+
 
         public abstract void Start();
         

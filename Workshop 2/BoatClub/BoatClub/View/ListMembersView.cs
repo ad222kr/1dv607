@@ -10,37 +10,30 @@ namespace BoatClub.View
     class ListMembersView : BaseView
     {
 
-        private MemberRegistry _memberRegistry;
-
-
-        public ListMembersView(MemberRegistry memberRegistry)
-        {
-            _memberRegistry = memberRegistry;
-        }
         public override void Show()
         {
             Console.Clear();
             Console.WriteLine("What type of list do you want to see?");
         }
 
-        public void DoesUserWantToSeeCompactList()
+        public void DoesUserWantToSeeCompactList(MemberRegistry memberRegistry)
         {
             int key = GetMenuChoice("1. Compact list.\n2. Verbose list", 2);
             if (key == 1)
             {
-                ShowCompactList();
+                ShowCompactList(memberRegistry);
             }
             else if (key == 2)
             {
-                ShowVerboseList();
+                ShowVerboseList(memberRegistry);
             }
         }
 
-        private void ShowVerboseList()
+        private void ShowVerboseList(MemberRegistry memberRegistry)
         {
             //TODO: FORMATTING OF STRINGS
             Console.Clear();
-            foreach (var member in _memberRegistry.Members)
+            foreach (var member in memberRegistry.Members)
             {
                 Console.WriteLine(String.Format("{0} {1} {2} {3}", member.FirstName, member.LastName, member.SocialSecurityNumber, member.MemberID));
                 foreach (var boats in member.Boats)
@@ -51,11 +44,11 @@ namespace BoatClub.View
             }
         }
 
-        private void ShowCompactList()
+        private void ShowCompactList(MemberRegistry memberRegistry)
         {
             //TODO: FORMATTING OF STRINGS
             Console.Clear();
-            foreach (var member in _memberRegistry.Members)
+            foreach (var member in memberRegistry.Members)
             {
                 Console.WriteLine(String.Format("{0} {1} {2} {3}", member.FirstName, member.LastName, member.MemberID, member.Boats.Count));
             }

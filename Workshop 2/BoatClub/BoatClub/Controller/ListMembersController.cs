@@ -21,7 +21,7 @@ namespace BoatClub.Controller
         public override void Start()
         {
             _view.Show();
-            _view.DoesUserWantToSeeCompactList();
+            _view.DoesUserWantToSeeCompactList(_memberRegistry);
             _view.ShowMessage();
         }
     }
