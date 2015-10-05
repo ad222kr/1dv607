@@ -17,7 +17,7 @@ namespace BoatClub.View
 
         
 
-        public override void ShowMessage()
+        public override void ShowSuccessMessage()
         {
             Console.WriteLine("Boat registered!");
             Console.ReadKey();

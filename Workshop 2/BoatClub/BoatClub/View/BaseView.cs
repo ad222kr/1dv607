@@ -75,6 +75,6 @@ namespace BoatClub.View
         /// Shows a message and continues on key pressed
         /// </summary>
         /// <param name="message"></param>
-        public abstract void ShowMessage();
+        public abstract void ShowSuccessMessage();
     }
 }

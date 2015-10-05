@@ -49,6 +49,7 @@
     <Compile Include="Controller\LookAtSpecificMemberController.cs" />
     <Compile Include="Controller\RegisterBoatController.cs" />
     <Compile Include="Controller\RegisterMemberController.cs" />
+    <Compile Include="Controller\UpdateBoatController.cs" />
     <Compile Include="Controller\UpdateMemberController.cs" />
     <Compile Include="Model\Boat.cs" />
     <Compile Include="Model\DAL\MemberDAL.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="View\BaseView.cs" />
     <Compile Include="View\RegisterBoatView.cs" />
     <Compile Include="View\RegisterMemberView.cs" />
+    <Compile Include="View\UpdateBoatView.cs" />
     <Compile Include="View\UpdateMemberView.cs" />
   </ItemGroup>
   <ItemGroup>

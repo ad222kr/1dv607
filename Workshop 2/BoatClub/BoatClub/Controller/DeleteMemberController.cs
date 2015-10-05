@@ -29,7 +29,7 @@ namespace BoatClub.Controller
                 if (_memberRegistry.DeleteMemberByID(memberID))
                 {
                     Service.SaveMemberRegistry(_memberRegistry);
-                    _view.ShowMessage();
+                    _view.ShowSuccessMessage();
                     break;
                 }
                 _view.ShowMemberDoesNotExistMessage();

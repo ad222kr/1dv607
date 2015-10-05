@@ -14,7 +14,7 @@ namespace BoatClub.View
             Console.WriteLine("Enter ID of member to update: ");
         }
 
-        public override void ShowMessage()
+        public override void ShowSuccessMessage()
         {
             Console.WriteLine("Update successful, press any key to continue");
             Console.ReadKey();

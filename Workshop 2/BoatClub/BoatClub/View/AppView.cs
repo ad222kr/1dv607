@@ -31,7 +31,7 @@ namespace BoatClub.View
 
         public override void Show()
         {
-            ShowMessage();
+            ShowSuccessMessage();
         }
 
         public Event GetEvent()
@@ -74,7 +74,7 @@ namespace BoatClub.View
             return sb.ToString();
         }
 
-        public override void ShowMessage()
+        public override void ShowSuccessMessage()
         {
             Console.Clear();
             Console.WriteLine(title);

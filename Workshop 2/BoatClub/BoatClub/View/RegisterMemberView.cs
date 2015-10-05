@@ -29,7 +29,7 @@ namespace BoatClub.View
             return member;
         }
 
-        public override void ShowMessage()
+        public override void ShowSuccessMessage()
         {
             Console.WriteLine(confirmMessage);
             Console.ReadKey();

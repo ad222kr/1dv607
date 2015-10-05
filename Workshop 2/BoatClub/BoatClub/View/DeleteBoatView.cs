@@ -9,12 +9,13 @@ namespace BoatClub.View
 {
     public class DeleteBoatView : BaseView
     {
+
         public override void Show()
         {
             Console.WriteLine("Delete a boat!");
         }
 
-        public override void ShowMessage()
+        public override void ShowSuccessMessage()
         {
             Console.WriteLine("Boat deleted!");
             Console.ReadKey();
@@ -27,8 +28,7 @@ namespace BoatClub.View
             return GetIntInputFromString();
         }
 
-
-        public int GetIndexOfBoatToDelete(Member member)
+        public int GetIndexOfBoat(Member member)
         {
             foreach (var boat in member.Boats)
             {

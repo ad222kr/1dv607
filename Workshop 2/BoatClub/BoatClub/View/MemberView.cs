@@ -15,7 +15,7 @@ namespace BoatClub.View
             Console.WriteLine("Please enter a member ID to view a member");
         }
 
-        public override void ShowMessage()
+        public override void ShowSuccessMessage()
         {
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();

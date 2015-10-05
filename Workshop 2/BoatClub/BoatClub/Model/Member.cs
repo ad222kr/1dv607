@@ -86,5 +86,10 @@ namespace BoatClub.Model
         {
             _boats.RemoveAt(index);
         }
+
+        public Boat GetBoatByIndex(int index)
+        {
+            return _boats.ElementAt(index);
+        }
     }
 }

@@ -111,7 +111,9 @@ namespace BoatClub.Controller
 
         private void UpdateBoat()
         {
-            throw new NotImplementedException();
+            var view = new UpdateBoatView();
+            var controller = new UpdateBoatController(view);
+            controller.Start();
         }
 
         private void DeleteBoat()
@@ -121,11 +123,5 @@ namespace BoatClub.Controller
             controller.Start();
         }
 
-
-
-        internal bool Quit()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

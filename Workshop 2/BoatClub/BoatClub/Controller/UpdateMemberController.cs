@@ -33,7 +33,7 @@ namespace BoatClub.Controller
                     int optionKey = _view.GetUserOptionChoice();
                     UpdateMember(member, optionKey);
                     Service.SaveMemberRegistry(_memberRegistry);
-                    _view.ShowMessage();
+                    _view.ShowSuccessMessage();
                     break;
 
                 }

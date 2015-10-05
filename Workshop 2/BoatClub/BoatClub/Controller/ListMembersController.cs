@@ -22,7 +22,7 @@ namespace BoatClub.Controller
         {
             _view.Show();
             _view.DoesUserWantToSeeCompactList(_memberRegistry);
-            _view.ShowMessage();
+            _view.ShowSuccessMessage();
         }
     }
 }

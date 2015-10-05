@@ -1,4 +1,5 @@
-﻿using BoatClub.View;
+﻿using BoatClub.Model;
+using BoatClub.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,14 @@ using System.Threading.Tasks;
 
 namespace BoatClub.Controller
 {
-    public class DeleteBoatController : BaseController
+    public class UpdateBoatController : BaseController
     {
-        private DeleteBoatView _view;
+        private UpdateBoatView _view;
 
-        public DeleteBoatController(DeleteBoatView view) :base() 
+        public UpdateBoatController(UpdateBoatView view)
         {
             _view = view;
         }
-
         public override void Start()
         {
             _view.Show();
@@ -26,8 +26,11 @@ namespace BoatClub.Controller
                 {
                     int memberID = _view.GetMemberID();
                     var member = _memberRegistry.GetMemberByID(memberID);
-                    var index = _view.GetIndexOfBoat(member);
-                    member.RemoveBoatByIndex(index);
+                    int index = _view.GetIndexOfBoat(member);
+                    var boat = member.GetBoatByIndex(index);
+
+                    int optionKey = _view.GetUserOptionChoice();
+                    UpdateBoat(boat, optionKey);
                     Service.SaveMemberRegistry(_memberRegistry);
                     _view.ShowSuccessMessage();
                     break;
@@ -38,6 +41,19 @@ namespace BoatClub.Controller
                     _view.ShowFeedbackMessage(e.Message, true);
                 }
             } while ((Console.ReadKey().Key != ConsoleKey.Backspace));
+        }
+
+        private void UpdateBoat(Boat boat, int optionKey)
+        {
+            switch (optionKey)
+            {
+                case 1:
+                    boat.Length = _view.GetBoatLength();
+                    break;
+                case 2:
+                    boat.Type = _view.GetBoatType();
+                    break;
+            }
         }
     }
 }

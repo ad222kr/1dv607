@@ -35,7 +35,7 @@ namespace BoatClub.Controller
                     member.MemberID = _memberRegistry.GetUniqueMemberId();
                     _memberRegistry.SaveMember(member);
                     Service.SaveMemberRegistry(_memberRegistry);
-                    _view.ShowMessage();
+                    _view.ShowSuccessMessage();
                     break;
                 }
                 catch (Exception e)

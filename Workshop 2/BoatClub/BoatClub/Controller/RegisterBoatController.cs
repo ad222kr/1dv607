@@ -29,7 +29,7 @@ namespace BoatClub.Controller
                     var boat = _view.GetBoat();
                     member.AddBoat(boat);
                     Service.SaveMemberRegistry(_memberRegistry);
-                    _view.ShowMessage();
+                    _view.ShowSuccessMessage();
 
                     break;
                 }

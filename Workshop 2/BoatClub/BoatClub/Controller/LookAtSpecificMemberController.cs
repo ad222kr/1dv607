@@ -30,7 +30,7 @@ namespace BoatClub.Controller
                     int memberID = _view.GetMemberID();
                     var member = _memberRegistry.GetMemberByID(memberID);
                     _view.DisplayMember(member);
-                    _view.ShowMessage();
+                    _view.ShowSuccessMessage();
                     break;
                 }
                 catch (Exception exception)

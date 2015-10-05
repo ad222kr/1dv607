@@ -15,7 +15,7 @@ namespace BoatClub.View
             Console.WriteLine("Please enter the ID of the member to delete: ");
         }
 
-        public override void ShowMessage()
+        public override void ShowSuccessMessage()
         {
             Console.WriteLine("Member Deleted successfully!");
             Console.ReadKey();
