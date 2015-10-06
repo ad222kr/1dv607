@@ -34,7 +34,7 @@ namespace BoatClub.Controller
                 }
                 _view.ShowMemberDoesNotExistMessage();
 
-            } while ((Console.ReadKey().Key != ConsoleKey.Backspace));   
+            } while (_view.WantsToTryAgain());   
             
             
    

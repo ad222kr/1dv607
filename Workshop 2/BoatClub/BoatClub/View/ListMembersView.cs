@@ -33,24 +33,46 @@ namespace BoatClub.View
         {
             //TODO: FORMATTING OF STRINGS
             Console.Clear();
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
+            
+            Console.WriteLine(String.Format("{0,-15} {1,-15} {2,-22} {3,-8}", "Firstname", "Lastname", "Social Security Number", "Member ID"));
+            Console.ResetColor();
+            Console.WriteLine();
             foreach (var member in memberRegistry.Members)
             {
-                Console.WriteLine(String.Format("{0} {1} {2} {3}", member.FirstName, member.LastName, member.SocialSecurityNumber, member.MemberID));
-                foreach (var boats in member.Boats)
+                Console.WriteLine(String.Format("{0,-15} {1,-15} {2,-22} {3,-8}", member.FirstName, member.LastName, member.SocialSecurityNumber, member.MemberID));
+                
+                if (member.Boats.Count > 0)
                 {
-                    Console.WriteLine(String.Format("{0} {1}", boats.Type, boats.Length));
+                    
+                    Console.WriteLine("{0,10}", "Boats");
+                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.WriteLine(String.Format("     {0,-15} {1,-5}", "Type", "Length"));
+                    Console.ResetColor();
+                    foreach (var boat in member.Boats)
+                    {
+                        Console.WriteLine(String.Format("     {0,-15} {1,-5}", boat.Type, boat.Length));
+                    }
                 }
+                Console.WriteLine();
+                
 
             }
         }
 
         private void ShowCompactList(MemberRegistry memberRegistry)
         {
-            //TODO: FORMATTING OF STRINGS
             Console.Clear();
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
+
+            Console.WriteLine(String.Format("{0,-15} {1,-15} {2,-15} {3,-8}", "Firstname", "Lastname", "Member ID", "Number of boats"));
+            Console.ResetColor();
+            Console.WriteLine();
+            
+
             foreach (var member in memberRegistry.Members)
             {
-                Console.WriteLine(String.Format("{0} {1} {2} {3}", member.FirstName, member.LastName, member.MemberID, member.Boats.Count));
+                Console.WriteLine(String.Format("{0,-15} {1,-15} {2,-15} {3,-8}", member.FirstName, member.LastName, member.MemberID, member.Boats.Count));
             }
         }
 

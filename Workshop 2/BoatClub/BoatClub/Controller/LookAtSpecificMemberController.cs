@@ -37,7 +37,7 @@ namespace BoatClub.Controller
                 {
                     _view.ShowFeedbackMessage(exception.Message, true);
                 }
-            } while ((Console.ReadKey().Key != ConsoleKey.Backspace));
+            } while (_view.WantsToTryAgain());
         }
 
     }

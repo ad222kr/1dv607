@@ -1,24 +1,209 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BoatClub.Model.Boat">
-    <Position X="4.75" Y="1.75" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="BoatClub.Controller.AppController">
+    <Position X="2.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>gAAIAAAAACAAAAAAAAAQgACAAgAJAAAAACAAAABAAAA=</HashCode>
+      <FileName>Controller\AppController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Controller.BaseController">
+    <Position X="9.25" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAQAAAAAAAAAAgAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\BaseController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_memberRegistry" />
+      <Field Name="_service" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BoatClub.Controller.DeleteBoatController">
+    <Position X="7.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Controller\DeleteBoatController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Controller.DeleteMemberController">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Controller\DeleteMemberController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Controller.ListMembersController">
+    <Position X="11.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Controller\ListMembersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Controller.LookAtSpecificMemberController">
+    <Position X="16.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Controller\LookAtSpecificMemberController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Controller.RegisterBoatController">
+    <Position X="5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Controller\RegisterBoatController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Controller.RegisterMemberController">
+    <Position X="14" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Controller\RegisterMemberController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Controller.UpdateBoatController">
+    <Position X="18.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Controller\UpdateBoatController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Controller.UpdateMemberController">
+    <Position X="9.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAIAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Controller\UpdateMemberController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Model.DAL.MemberDAL">
+    <Position X="8.75" Y="0.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAACAAAAACBAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Model\DAL\MemberDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.Model.Boat" Collapsed="true">
+    <Position X="24.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAABQAAAAAAAAA=</HashCode>
       <FileName>Model\Boat.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BoatClub.Model.Member">
-    <Position X="2.5" Y="1.25" Width="1.5" />
+  <Class Name="BoatClub.Model.Member" Collapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAEAAAAAAAAAAAAEAAAAAAQQAAACAEAAAAAABAAg=</HashCode>
+      <HashCode>CAEAAEAAAAACAAAAAAEAAAAAAQQAAACAEAAAAAABAAg=</HashCode>
       <FileName>Model\Member.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="BoatClub.Model.MemberRegistry">
+    <Position X="3.75" Y="6" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAARAAAAAAAAAAAAAAAABAAAEAAAAACA=</HashCode>
+      <FileName>Model\MemberRegistry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_members" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BoatClub.Model.Service">
+    <Position X="8.25" Y="4.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAIAAAAAAAAAAAIAAAAAAAgAAAA=</HashCode>
+      <FileName>Model\Service.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_memberDAL" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BoatClub.View.AppView">
+    <Position X="6.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAACAAABAAAAEAAAAAAAAAAAYCAA=</HashCode>
+      <FileName>View\AppView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.BaseView">
+    <Position X="14.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAEACAAAAAAAAEAAAAAAAABAAAAAA=</HashCode>
+      <FileName>View\BaseView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.DeleteBoatView">
+    <Position X="22.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAEAIAAAAAAAAAAAAE=</HashCode>
+      <FileName>View\DeleteBoatView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.DeleteMemberView">
+    <Position X="15.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\DeleteMemberView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.ListMembersView">
+    <Position X="11" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAEEIAAAAAAAAAAACA=</HashCode>
+      <FileName>View\ListMembersView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.MemberView">
+    <Position X="16.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAACAAAAAAAAEAAAAAAAAQAAAAAE=</HashCode>
+      <FileName>View\MemberView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.MenuItem" Collapsed="true">
+    <Position X="26.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>View\MenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.RegisterBoatView">
+    <Position X="8.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAACAAAAAAAAEAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>View\RegisterBoatView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.RegisterMemberView">
+    <Position X="13.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAACAAAAAAAAEAAAAACAAAAAAAAA=</HashCode>
+      <FileName>View\RegisterMemberView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.UpdateBoatView">
+    <Position X="20" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAACAAAAAAAAEAIAAAAAABAAAAQE=</HashCode>
+      <FileName>View\UpdateBoatView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoatClub.View.UpdateMemberView">
+    <Position X="17.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAIAAAAAAAAAACAAAAAAAAEAAAAAAAAAAACAQA=</HashCode>
+      <FileName>View\UpdateMemberView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Enum Name="BoatClub.Model.BoatType" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+    <Position X="24.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAgAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAABAAAA=</HashCode>
       <FileName>Model\Boat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BoatClub.View.Event" Collapsed="true">
+    <Position X="26.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAIAAAAAAAAAAAAAAAQgACAAgAIAAAAAAAAAAFAAQA=</HashCode>
+      <FileName>View\BaseView.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

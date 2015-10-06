@@ -42,7 +42,7 @@ namespace BoatClub.Controller
                     _view.ShowFeedbackMessage(e.Message, true);
 
                 }
-            } while (Console.ReadKey().Key != ConsoleKey.Backspace);
+            } while (_view.WantsToTryAgain());
         }
 
         private void UpdateMember(Member member, int key)

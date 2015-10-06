@@ -19,11 +19,7 @@ namespace BoatClub.View
         UpdateBoat,
         Quit
     }
-    public enum EventType
-    {
-        Member,
-        Boat
-    }
+    
     public abstract class BaseView
     {
         public abstract void Show();
@@ -76,5 +72,11 @@ namespace BoatClub.View
         /// </summary>
         /// <param name="message"></param>
         public abstract void ShowSuccessMessage();
+
+        public bool WantsToTryAgain()
+        {
+            Console.WriteLine("Press backspace to go back, any other key to try again");
+            return Console.ReadKey(true).Key != ConsoleKey.Backspace;
+        }
     }
 }
