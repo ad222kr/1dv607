@@ -34,11 +34,7 @@ namespace BoatClub.Model
 
         public int GetUniqueMemberId()
         {
-            var tempMembers = _members.OrderBy(x => x.MemberID).ToArray();
-            int id = tempMembers[tempMembers.Length - 1].MemberID + 1;
-            return id;
-
-
+            return _members.Max(x => x.MemberID) + 1;
         }
 
         public bool DeleteMemberByID(int memberID)
