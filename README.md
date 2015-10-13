@@ -2,7 +2,7 @@
 Everything for the course 1dv607 goes here
 
 ##Workshop 2  
-[Class diagram](https://github.com/ad222kr/1dv607/blob/master/Workshop%202/ClassDiagram%20(1).pdf)  
+[Class diagram](https://github.com/ad222kr/1dv607/blob/master/Workshop%202/ClassDiagramRIGHTONE.pdf)  
 [Register member sequence diagram](https://github.com/ad222kr/1dv607/blob/master/Workshop%202/RegisterMemberSequence.png)  
 [List all members sequence diagram](https://github.com/ad222kr/1dv607/blob/master/Workshop%202/ListAllMembersSequence.png)  
 [Link to executable](https://github.com/ad222kr/1dv607/blob/master/Workshop%202/BoatClub/BoatClub/bin/Debug/BoatClub.exe)  
