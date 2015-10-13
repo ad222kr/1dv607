@@ -43,32 +43,20 @@
   <ItemGroup>
     <Compile Include="Controller\AppController.cs" />
     <Compile Include="Controller\BaseController.cs" />
-    <Compile Include="Controller\DeleteBoatController.cs" />
-    <Compile Include="Controller\DeleteMemberController.cs" />
-    <Compile Include="Controller\ListMembersController.cs" />
-    <Compile Include="Controller\LookAtSpecificMemberController.cs" />
-    <Compile Include="Controller\RegisterBoatController.cs" />
-    <Compile Include="Controller\RegisterMemberController.cs" />
-    <Compile Include="Controller\UpdateBoatController.cs" />
-    <Compile Include="Controller\UpdateMemberController.cs" />
+    <Compile Include="Controller\MemberController.cs" />
+    <Compile Include="Controller\BoatController.cs" />
     <Compile Include="Model\Boat.cs" />
     <Compile Include="Model\DAL\MemberDAL.cs" />
     <Compile Include="Model\Member.cs" />
     <Compile Include="Model\MemberRegistry.cs" />
     <Compile Include="Model\Service.cs" />
-    <Compile Include="View\DeleteBoatView.cs" />
-    <Compile Include="View\DeleteMemberView.cs" />
-    <Compile Include="View\ListMembersView.cs" />
+    <Compile Include="View\BoatView.cs" />
     <Compile Include="View\MemberView.cs" />
     <Compile Include="View\MenuItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\AppView.cs" />
     <Compile Include="View\BaseView.cs" />
-    <Compile Include="View\RegisterBoatView.cs" />
-    <Compile Include="View\RegisterMemberView.cs" />
-    <Compile Include="View\UpdateBoatView.cs" />
-    <Compile Include="View\UpdateMemberView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

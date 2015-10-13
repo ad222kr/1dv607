@@ -20,12 +20,6 @@ namespace BoatClub.Controller
         public BaseController()
         {
             _memberRegistry = Service.LoadMemberRegistry();
-        }
-
-
-        public abstract void Start();
-
-        
-        
+        }      
     }
 }

@@ -13,19 +13,24 @@ namespace BoatClub.Controller
     public class AppController : BaseController
     {
         private AppView _view;
+        private BoatController _boatController;
+        private MemberController _memberController;
+
    
-        public AppController(AppView appView)
+        public AppController(AppView appView, BoatController boatController, MemberController memberController)
         {
             _view = appView;
+            _boatController = boatController;
+            _memberController = memberController;
         }
 
 
-        public override void Start()
+        public void Start()
         {
             while (true)
             {
 
-                _view.Show();
+                _view.ShowDeleteBoat();
                 Event e = _view.GetEvent();
                 ManageEventChoice(e);
                 
@@ -68,59 +73,43 @@ namespace BoatClub.Controller
 
         private void RegisterMember()
         {
-            var view = new RegisterMemberView();
-            var controller = new RegisterMemberController(view);
-            controller.Start();
+            _memberController.RegisterMember();
         }
 
 
         private void DeleteMember()
         {
-            var view = new DeleteMemberView();
-            var controller = new DeleteMemberController(view);
-            controller.Start();
+            _memberController.DeleteMember();
         }
 
 
         private void ListMembers()
         {
-            var view = new ListMembersView();
-            var controller = new ListMembersController(view);
-            controller.Start();
+            _memberController.ListMembers();
         }
 
         private void LookAtSpecificMember()
         {
-            var view = new MemberView();
-            var controller = new LookAtSpecificMemberController(view);
-            controller.Start();
+            _memberController.DisplayMember();
         }
 
         private void UpdateMember()
         {
-            var view = new UpdateMemberView();
-            var controller = new UpdateMemberController(view);
-            controller.Start();
+            _memberController.UpdateMember();
         }
         private void RegisterBoat()
         {
-            var view = new RegisterBoatView();
-            var controller = new RegisterBoatController(view);
-            controller.Start();
+            _boatController.RegisterBoat();
         }
 
         private void UpdateBoat()
         {
-            var view = new UpdateBoatView();
-            var controller = new UpdateBoatController(view);
-            controller.Start();
+            _boatController.UpdateBoat();
         }
 
         private void DeleteBoat()
         {
-            var view = new DeleteBoatView();
-            var controller = new DeleteBoatController(view);
-            controller.Start();
+            _boatController.DeleteBoat();
         }
 
     }

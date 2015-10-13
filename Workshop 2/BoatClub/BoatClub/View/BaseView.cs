@@ -22,7 +22,6 @@ namespace BoatClub.View
     
     public abstract class BaseView
     {
-        public abstract void Show();
 
         protected int GetMenuChoice(string prompt, int maxChoices)
         {    
@@ -71,7 +70,6 @@ namespace BoatClub.View
         /// Shows a message and continues on key pressed
         /// </summary>
         /// <param name="message"></param>
-        public abstract void ShowSuccessMessage();
 
         public bool WantsToTryAgain()
         {

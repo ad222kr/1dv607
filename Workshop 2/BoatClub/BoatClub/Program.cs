@@ -12,11 +12,13 @@ namespace BoatClub
         static void Main(string[] args)
         {
             var appView = new AppView();
-            var appController = new AppController(appView);
+            var memberView = new MemberView();
+            var boatView = new BoatView();
+            var memberController = new MemberController(memberView);
+            var boatController = new BoatController(boatView);
+            var appController = new AppController(appView, boatController, memberController);
             
             appController.Start();
-            
-            
 
         }
     }

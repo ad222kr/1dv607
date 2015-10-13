@@ -29,9 +29,9 @@ namespace BoatClub.View
             };
         }
 
-        public override void Show()
+        public void ShowDeleteBoat()
         {
-            ShowSuccessMessage();
+            SetBoatDeletedSuccess();
         }
 
         public Event GetEvent()
@@ -74,7 +74,7 @@ namespace BoatClub.View
             return sb.ToString();
         }
 
-        public override void ShowSuccessMessage()
+        public void SetBoatDeletedSuccess()
         {
             Console.Clear();
             Console.WriteLine(title);
