@@ -28,6 +28,7 @@ namespace BlackJack.controller
             }
             else if (input == view.GameEvent.Hit)
             {
+
                 a_game.Hit();
             }
             else if (input == view.GameEvent.Stand)
