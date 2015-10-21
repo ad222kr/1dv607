@@ -5,10 +5,11 @@ using System.Text;
 
 namespace BlackJack.controller
 {
-    class PlayGame
+    class PlayGame : model.IBlackJackObserver
     {
         public bool Play(model.Game a_game, view.IView a_view)
         {
+            a_game.AddSubscriber(this);
             a_view.DisplayWelcomeMessage();
             
             a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());

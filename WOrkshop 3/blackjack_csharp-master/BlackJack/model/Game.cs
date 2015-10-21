@@ -10,10 +10,17 @@ namespace BlackJack.model
         private model.Dealer m_dealer;
         private model.Player m_player;
 
+        private List<IBlackJackObserver> m_observers;
+
         public Game()
         {
             m_dealer = new Dealer(new rules.RulesFactory());
             m_player = new Player();
+        }
+
+        public void AddSubscriber(IBlackJackObserver a_sub)
+        {
+            m_observers.Add(a_sub);
         }
 
         public bool IsGameOver()
@@ -28,11 +35,17 @@ namespace BlackJack.model
 
         public bool NewGame()
         {
+            
             return m_dealer.NewGame(m_player);
         }
 
         public bool Hit()
         {
+            bool hitSucceeded = m_dealer.Hit(m_player);
+            foreach (var observer in m_observers)
+            {
+               // Some observer code here  
+            }
             return m_dealer.Hit(m_player);
         }
 
