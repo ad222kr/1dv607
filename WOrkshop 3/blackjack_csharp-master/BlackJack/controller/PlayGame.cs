@@ -7,36 +7,50 @@ namespace BlackJack.controller
 {
     class PlayGame : model.IBlackJackObserver
     {
-        public bool Play(model.Game a_game, view.IView a_view)
-        {
-            a_game.AddSubscriber(this);
-            a_view.DisplayWelcomeMessage();
-            
-            a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
-            a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
+        private model.Game m_game;
+        private view.IView m_view;
 
-            if (a_game.IsGameOver())
+        public PlayGame(model.Game a_game, view.IView a_view)
+        {
+            m_game = a_game;
+            m_view = a_view;
+            m_view.DisplayWelcomeMessage();
+        }
+
+        public bool Play()
+        {
+            m_game.Dealer.Subsribe(this);
+            m_game.Player.Subsribe(this);
+            
+            if (m_game.IsGameOver())
             {
-                a_view.DisplayGameOver(a_game.IsDealerWinner());
+                m_view.DisplayGameOver(m_game.IsDealerWinner());
+                return false; // Else it loops 3 times and prints "Dealer/Player is winner" 3 times    
             }
 
-            view.GameEvent input = a_view.GetInput();
+            view.GameEvent input = m_view.GetInput();
 
             if (input == view.GameEvent.NewGame)
             {
-                a_game.NewGame();
+                m_game.NewGame();
             }
             else if (input == view.GameEvent.Hit)
             {
-
-                a_game.Hit();
+                m_game.Hit();
             }
             else if (input == view.GameEvent.Stand)
             {
-                a_game.Stand();
+                m_game.Stand();
             }
 
             return input != view.GameEvent.Quit;
+        }
+
+        public void CardDealt()
+        {
+            m_view.DisplayWelcomeMessage(); // Since it Console.Clears every time, want to keep welcome-msg with instructions all the time
+            m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
+            m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
         }
     }
 }

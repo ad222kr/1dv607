@@ -7,6 +7,6 @@ namespace BlackJack.model
 {
     interface IBlackJackObserver
     {
-        void CardDealt(IEnumerable<Card> a_hand);
+        void CardDealt();
     }
 }
