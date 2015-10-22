@@ -16,6 +16,12 @@
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
     </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="af0b8949-0ef8-4b0a-b04a-898ae1e7ae10">
+      <profileInstance
+        Id="2b77d864-d22e-4678-8d05-bdf7710d1768"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
@@ -35,6 +41,18 @@
         Id="611d0dda-1055-4b6d-bca5-9dad81e292a9"
         LastKnownName="model"
         LastKnownLocation="Package1_0950.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8995329c-02a7-4d45-8498-8ac365ca32b9"
+        LastKnownName="BlackJack"
+        LastKnownLocation="Package_1447.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ab0452c8-b95c-4766-a431-62800497595c"
+        LastKnownName="System"
+        LastKnownLocation="Package1_1448.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

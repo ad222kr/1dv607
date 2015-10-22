@@ -57,5 +57,100 @@
         </suppliersInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="252979f4-26a2-4272-94e5-c7668cf2160f"
+        name="GameEvent"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="cb745bf7-116c-4384-b508-feb3897d6c87"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FP:%2F1dv607%2FWOrkshop 3%2Fblackjack_csharp-master%2FBlackJack%2Fbin%2FDebug%2FBlackJack.exe&quot; Namespace%3DBlackJack.view Type%3DGameEvent"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9c6e0750-e5b4-49b7-b1a0-62bba60f3601"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="66d2dfc1-ed13-472a-aab5-f119b58b1f00">
+                <propertyInstance
+                  Id="632676ac-78ad-4b7d-87fb-47adc279a8fd"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="26f19d1a-aa48-41bb-a39b-57899588eade">
+                <propertyInstance
+                  Id="c945352f-828f-4bba-baf6-bae9b041d09f"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="961c244f-84ac-4684-9f3e-20f2b3fc00f0">
+                <propertyInstance
+                  Id="7d59893b-db6f-46bc-8ab0-7717d1bcc1e0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="096e7fe0-11b1-40e4-ba5c-f166484b3538"
+            name="Hit">
+            <referencesInternal>
+              <reference
+                Id="8b87c9a4-552c-4b8b-bd1e-70a09d951faf"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FP:%2F1dv607%2FWOrkshop 3%2Fblackjack_csharp-master%2FBlackJack%2Fbin%2FDebug%2FBlackJack.exe&quot; Namespace%3DBlackJack.view Type%3DGameEvent Member%3DHit"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="0dd68961-6fa7-4458-a1cf-098cdea3f215"
+            name="NewGame">
+            <referencesInternal>
+              <reference
+                Id="568ac4c9-b8dd-4b61-9bfe-5eaad406dbd7"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FP:%2F1dv607%2FWOrkshop 3%2Fblackjack_csharp-master%2FBlackJack%2Fbin%2FDebug%2FBlackJack.exe&quot; Namespace%3DBlackJack.view Type%3DGameEvent Member%3DNewGame"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="90a70036-f812-4974-83a3-bb2fc824354c"
+            name="None">
+            <referencesInternal>
+              <reference
+                Id="24fded50-cbae-4fa3-860d-4830107d4f07"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FP:%2F1dv607%2FWOrkshop 3%2Fblackjack_csharp-master%2FBlackJack%2Fbin%2FDebug%2FBlackJack.exe&quot; Namespace%3DBlackJack.view Type%3DGameEvent Member%3DNone"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="6b3c5203-b846-4491-be27-bc2e5b38ca91"
+            name="Quit">
+            <referencesInternal>
+              <reference
+                Id="177bc172-b58e-4ff4-a03a-a8822c0fb32a"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FP:%2F1dv607%2FWOrkshop 3%2Fblackjack_csharp-master%2FBlackJack%2Fbin%2FDebug%2FBlackJack.exe&quot; Namespace%3DBlackJack.view Type%3DGameEvent Member%3DQuit"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="c7478a91-d89d-415b-9a0b-f040506662df"
+            name="Stand">
+            <referencesInternal>
+              <reference
+                Id="083a439b-7deb-4e8e-a1f5-5bad30fbabb9"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FP:%2F1dv607%2FWOrkshop 3%2Fblackjack_csharp-master%2FBlackJack%2Fbin%2FDebug%2FBlackJack.exe&quot; Namespace%3DBlackJack.view Type%3DGameEvent Member%3DStand"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

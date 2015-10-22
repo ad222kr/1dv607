@@ -12,6 +12,13 @@
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
+          <interfaceRealization
+            Id="86014c92-8eb3-4f87-8b58-e2aed8f6d09a">
+            <interfaceMoniker
+              Id="4bb44cda-baae-4feb-afa4-9d55ba0a61f6"
+              LastKnownName="IBlackJackObserver"
+              LastKnownLocation="Package1_0950.uml" />
+          </interfaceRealization>
           <dependency
             Id="9005e116-bc4e-4496-9ac1-df5cee2ef38e">
             <interfaceMoniker
@@ -27,6 +34,16 @@
               LastKnownLocation="Package1_0950.uml" />
           </dependency>
         </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c2f571ea-4e45-4967-a644-ecf0f5d919b8"
+            name="CardDealt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>
