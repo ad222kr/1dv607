@@ -13,5 +13,5 @@ To compile the project you need Visual Studio 2013. Just download everything in 
 
 ##Workshop 3
 [Source code](https://github.com/ad222kr/1dv607/tree/master/WOrkshop%203/blackjack_csharp-master)  
-[Class Diagram](https://github.com/ad222kr/1dv607/blob/master/WOrkshop%203/Class%20Diagram.pdf)
+[Class Diagram](https://github.com/ad222kr/1dv607/blob/master/WOrkshop%203/Class%20Diagram.pdf)  
 [Class Diagram updated after peer-review](https://github.com/ad222kr/1dv607/blob/master/WOrkshop%203/CLASSDIAGRAM%20(1).pdf)
