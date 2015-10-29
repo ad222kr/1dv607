@@ -5,10 +5,11 @@ using System.Text;
 
 namespace BlackJack.model
 {
-    class Dealer : Player
+    class Dealer : Player, ISubject
     {
         private Deck m_deck = null;
         private const int g_maxScore = 21;
+        private List<IBlackJackObserver> m_observer = new List<IBlackJackObserver>();
 
         private rules.INewGameStrategy m_newGameRule;
         private rules.IHitStrategy m_hitRule;
@@ -38,11 +39,7 @@ namespace BlackJack.model
         {
             if (m_deck != null && a_player.CalcScore() < g_maxScore && !IsGameOver())
             {
-                Card c;
-                c = m_deck.GetCard();
-                c.Show(true);
-                a_player.DealCard(c);
-
+                DealCard(a_player, true);
                 return true;
             }
             return false;
@@ -59,9 +56,7 @@ namespace BlackJack.model
             
             while (m_hitRule.DoHit(this))
             {
-                Card card = m_deck.GetCard();
-                card.Show(true);
-                DealCard(card);
+                DealCard(this, true);
             }
             return true;
         }
@@ -87,6 +82,28 @@ namespace BlackJack.model
                 return true;
             }
             return false;
+        }
+
+        public void DealCard(Player a_toGetCard, bool a_showCard)
+        {
+            var c = m_deck.GetCard();
+            c.Show(a_showCard);
+            a_toGetCard.DealCard(c);
+            Notify();
+        }
+        public void Subsribe(IBlackJackObserver a_observer)
+        {
+            m_observer.Add(a_observer);
+        }
+
+        public void Unsubscribe(IBlackJackObserver a_observer)
+        {
+            m_observer.Remove(a_observer);
+        }
+
+        public void Notify()
+        {
+            m_observer.ForEach(x => x.CardDealt());
         }
     }
 }

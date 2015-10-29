@@ -50,6 +50,7 @@ namespace BlackJack.view
 
         public void DisplayCard(model.Card a_card)
         {
+            
             System.Console.WriteLine("{0} of {1}", a_card.GetValue(), a_card.GetColor());
         }
 
@@ -70,8 +71,11 @@ namespace BlackJack.view
             {
                 DisplayCard(c);
             }
+
             System.Console.WriteLine("Score: {0}", a_score);
             System.Console.WriteLine("");
+            
+            
         }
 
         public void DisplayGameOver(bool a_dealerIsWinner)
@@ -84,8 +88,7 @@ namespace BlackJack.view
             else
             {
                 System.Console.WriteLine("You Won!");
-            }
-            
+            }    
         }
     }
 }
